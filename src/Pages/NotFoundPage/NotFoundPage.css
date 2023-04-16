@@ -1,0 +1,15 @@
+.notfoundpage_intro {
+    padding: 10px 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 600px;
+    background-color: var(--bg-color);
+}
+
+.notfoundpage_inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

@@ -1,0 +1,36 @@
+.navtab {
+    border-bottom: 2px solid transparent;
+    padding: 5px 0;
+    margin: 0 10px ;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navtab > a {
+    flex:1;
+    text-align: center;
+    text-decoration: none;
+    color: var(--bg-opposite-color);
+    /* font-weight: bold;
+    font-size: 1.5rem; */
+    transition: color 100ms ease-in-out;
+    letter-spacing: 1px;
+}
+
+.navtab:hover {
+    border-bottom: 2px solid #3777FF;
+}
+
+.navtab > a:hover {
+    color: var(--bg-opposite-color);
+}
+
+.navtab > a:active {
+    color: #DB2955;
+}
+
+.add_episode {
+    margin: 0;
+}

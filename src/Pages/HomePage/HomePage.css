@@ -1,0 +1,126 @@
+.homepage_intro {
+    padding: 10px 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 600px;
+    background-color: var(--bg-color);
+}
+
+.left_intro {
+    flex: 1;
+    padding: 10px;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+
+    background-color: var(--bg-color);
+}
+
+.homepage_title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--bg-opposite-color);
+    animation:fadeInUp 1s ease backwards;
+}
+
+.homepage_description {
+    padding: 0 5px;
+    width: 80%;
+    margin: 10px 0;
+    color: var(--bg-opposite-color);
+    animation:fadeInUp 1s ease backwards;
+}
+
+.left_intro > button {
+    margin: 10px 0;
+    animation:fadeInUp 1s ease backwards, glowing 1300ms infinite;
+}
+
+.right_intro {
+    flex:1;
+
+    padding: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.right_intro > img {
+    width: 500px;
+    
+    filter: drop-shadow(5px 5px 10px var(--bg-opposite-color));
+    animation-name: upDownAnimation;
+    animation-duration: 1s;
+    animation-iteration-count :infinite;
+    animation-timing-function:ease-in-out;
+    animation-direction: alternate; 
+}
+
+.fadeInUp {
+    animation:fadeInUp 1s ease backwards;
+}
+
+@media only screen and (max-width:1065px){
+    .homepage_intro {
+        flex-direction: column;
+    }
+
+    .left_intro {
+        order: 2;
+        width: 100%;
+    }
+
+    .homepage_description {
+        width: 70%;
+    }
+
+    .right_intro {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width:500px){
+
+    .right_intro > img {
+        width: 90%;
+    }
+
+    .homepage_description {
+        width: 90%;
+    }
+}
+
+.actors_list {
+    border: 1px solid red;
+}
+
+@keyframes upDownAnimation {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes fadeInUp{
+    0%{transform:translate(0px, 100px); opacity: 0;}
+    100%{transform:translate(0px, 0); opacity: 1;}
+}
+
+@keyframes glowing {
+    0% {
+      -webkit-box-shadow: 0 0 10px var(--button-glowing-color);
+    }
+    50% {
+      -webkit-box-shadow: 0 0 20px var(--button-glowing-color);
+    }
+    100% {
+      -webkit-box-shadow: 0 0 10px var(--button-glowing-color);
+    }
+}

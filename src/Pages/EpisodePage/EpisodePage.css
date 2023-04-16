@@ -1,0 +1,144 @@
+.episodepage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--bg-color);
+}
+
+.episodepage_inner {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.episode_inner_topbar {
+    background-color: none;
+    flex:0;
+}
+
+.episode_inner_mainbar {
+    overflow: scroll;
+    flex:9;
+
+    padding: 10px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.episode_box {
+    border: 4px solid transparent;
+    border-radius:5px;
+    padding: 10px;
+    background-color: var(--bg-color);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transition: border 500ms ease-in-out;
+    margin: 5px 0;
+    position: relative;
+}
+
+.episode_index {
+    position: absolute;
+    z-index: 10;
+    width: 40px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    top: 50%;
+    left: 0%;
+    background-color: #6600FF;
+    transform: translate(-10px,-20px);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.episode_box:hover > .episode_index {
+    display: none;
+}
+
+.episode_index > span {
+    color: white;
+    font-weight: bold;
+}
+
+.episode_box:hover {
+    border: 4px solid var(--bg-opposite-color);
+}
+
+.episode_class {
+    width: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    aspect-ratio: calc(16/9);
+}
+
+.episode_class > iframe {
+    flex: 1;
+    border-radius: 5px;
+}
+
+.episode_details {
+    padding: 3px;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.episode_details > span {
+    width: 100%;
+    font-weight: bold;
+    color: var(--bg-opposite-color);
+}
+
+.episode_inner_bottombar {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* position: absolute; */
+    bottom: 10px;
+    z-index: 10;
+}
+
+.pagination {
+    background-color: var(--pagination-color);  
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.loading_class {
+    width: 100%;
+    height: 100px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.episode_inner_mainbar > h3 {
+    color : var(--bg-opposite-color)
+}
+
+@media only screen and (max-width:500px) {
+    .episode_index {
+        top : 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+}
