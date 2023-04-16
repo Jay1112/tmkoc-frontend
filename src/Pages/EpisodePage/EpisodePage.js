@@ -58,7 +58,7 @@ function EpisodePage(){
             <div className="custom_container episodepage_inner" style={{height:introHeight}}>
                 <div className="custom_container episode_inner_topbar">
                 </div>
-                <div className="custom_container episode_inner_mainbar">
+                <div className="custom_container full episode_inner_mainbar">
                     {
                         isCompleted &&
                         responseData && 
