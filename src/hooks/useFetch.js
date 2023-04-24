@@ -5,7 +5,7 @@ function useFetch(){
     const [isCompleted,setCompleted] = useState(true);
     const [responseData,setResponseData] = useState(null);
     const [error,setError] = useState(null);
-    const prefix = 'https://tmkoc-backend-production.up.railway.app';
+    const prefix = 'https://tmkoc-backend.onrender.com';
     
     const fetchAPI4Get = (url,queryParams) => {
         setCompleted(false);
